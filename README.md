@@ -1,5 +1,5 @@
 # Ubuntu Server
-## Version 0.3
+## Version 0.3.1
 
 - Ubuntu docker images with SSH access, Vim and Net tools and apache / php / phpmyadmin / imagemick und vielem mehr..
 
