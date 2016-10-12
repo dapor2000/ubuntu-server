@@ -11,6 +11,6 @@ cd
 echo "RESTART APACHE"
 /etc/init.d/apache2 restart
 echo "START TRACCAR"
-/opt/traccar/bin/traccar start &
+/traccar/bin/traccar start &
 echo "START SSHD"
 /usr/sbin/sshd -D
