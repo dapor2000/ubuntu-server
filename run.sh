@@ -1,5 +1,6 @@
 #!/bin/bash
 updatedb
+ln -s /config/traccar/ /traccar/conf
 rm /etc/apache2/sites-available/default-ssl.conf                                                                                          
 rm /etc/apache2/sites-enabled/default-ssl.conf 
 cd /etc/apache2/mods-available/
