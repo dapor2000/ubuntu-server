@@ -26,7 +26,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
  RUN cd /traccar && chmod +x traccar.run
  RUN cd /traccar && ./traccar.run
  RUN mkdir -p /config/traccar
- RUN cd /traccar &&  cp conf/* /config/traccar/
+ RUN cd /traccar &&  cp /opt/traccar/conf/* /config/traccar/
 
 RUN mkdir /var/run/sshd && mkdir /root/.ssh/ && touch /root/.ssh/authorized_keys
 
