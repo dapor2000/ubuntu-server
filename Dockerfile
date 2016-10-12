@@ -25,7 +25,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
  RUN cd /traccar &&  unzip traccar-linux-64-3.5.zip
  RUN cd /traccar && chmod +x traccar.run
  RUN cd /traccar && ./traccar.run
-
+ RUN mkdir -p /config/traccar
+ RUN cd /traccar &&  cp /opt/traccar/conf/* /config/traccar/
 
 RUN mkdir /var/run/sshd && mkdir /root/.ssh/ && touch /root/.ssh/authorized_keys
 
@@ -51,7 +52,7 @@ RUN echo "short_open_tag = On" >> /etc/php5/apache2/php.ini
 
 
 
-
+VOLUME /config/traccar
 VOLUME /var/www
 VOLUME /etc/letsencrypt
 VOLUME /home/hlx
