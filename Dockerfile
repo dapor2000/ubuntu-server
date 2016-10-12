@@ -56,7 +56,7 @@ VOLUME /var/www
 VOLUME /etc/letsencrypt
 VOLUME /home/hlx
 
-EXPOSE 80 443 3000 9000 3306 22
+EXPOSE 80 443 82 22
 
 ENTRYPOINT ["/scripts/docker-entrypoint.sh"]
 
