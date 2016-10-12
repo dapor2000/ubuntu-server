@@ -20,10 +20,11 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
  RUN apt-get install wget oracle-java8-installer -y
  RUN apt-get install oracle-java8-set-default -y
 
- RUN cd /opt &&  wget https://github.com/tananaev/traccar/releases/download/v3.5/traccar-linux-64-3.5.zip
- RUN  cd /opt &&  unzip traccar-linux-64-3.5.zip
- RUN cd /opt && chmod +x traccar.run
- RUN cd /opt && ./traccar.run
+ RUN mkdir /traccar
+ RUN cd /traccar &&  wget https://github.com/tananaev/traccar/releases/download/v3.5/traccar-linux-64-3.5.zip
+ RUN cd /traccar &&  unzip traccar-linux-64-3.5.zip
+ RUN cd /traccar && chmod +x traccar.run
+ RUN cd /traccar && ./traccar.run
 
 
 RUN mkdir /var/run/sshd && mkdir /root/.ssh/ && touch /root/.ssh/authorized_keys
